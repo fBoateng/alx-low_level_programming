@@ -1,17 +1,18 @@
 #include "lists.h"
 
 /**
- * listint_len - length of list
- * @h: struct to traverse
- * Return: amount of elements
+ * print_listint - print integer in list
+ * @h: struct listint_t
+ * Return:value of size_t
  */
 
-size_t listint_len(const listint_t *h)
+size_t print_listint(const listint_t *h)
 {
 	size_t number = 0;
 
 	while (h != NULL)
 	{
+		printf("%d\n", h->n);
 		number++;
 		h = h->next;
 	}
