@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 /**
- * free_listint2 - frees list, head set to NULL
- * @head: head node
+ * free_listint2 - frees a listint_t list5-free_listint2.c.
+ * @head: a double pointer to the head of the list
  *
+ * Return: void
  */
 
 void free_listint2(listint_t **head)
@@ -15,9 +16,8 @@ void free_listint2(listint_t **head)
 		return;
 	while (*head != NULL)
 	{
-		tmp = *head;
+		tmp = (*head)->next;
 		free(*head);
-		*head = tmp->next;
+		*head = tmp;
 	}
-	*head = NULL;
 }
